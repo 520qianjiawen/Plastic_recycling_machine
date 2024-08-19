@@ -1,0 +1,38 @@
+{
+  "title": "Tarification simple et transparente",
+  "subTitle": "Améliorez l'efficacité grâce à des plans clairs axés sur la valeur.",
+  "badge": "Meilleur prix",
+  "thirdOption": "Solutions d'entreprise ?",
+  "btnText": "Obtenez un devis personnalisé",
+
+  "starterKit": {
+    "name": "Lames de déchiqueteuse",
+    "description": "Meilleure option pour les déchiqueteuses",
+    "price": "$10",
+    "cents": ".00",
+    "billingFrequency": "USD / pièce",
+    "features": [
+      "Performance : Bonne résistance à l'usure, bonne ténacité, longue durée de vie",
+      "Dureté : HRC56-58 ou selon les demandes des clients",
+      "Traitement : Traitement thermique sous vide et traitement cryogénique"
+    ],
+    "purchaseBtnTitle": "Obtenez les lames de déchiqueteuse",
+    "purchaseLink": "mailto:sales@rumtoo.com"
+  },
+
+  "professionalToolbox": {
+    "name": "Lames professionnelles pour broyeurs/granulateurs",
+    "description": "Idéal pour les broyeurs/granulateurs",
+    "price": "$24.8",
+    "cents": ".00",
+    "billingFrequency": "USD / pièce",
+    "features": [
+      "Performance : Bonne résistance à l'usure, bonne ténacité, longue durée de vie",
+      "Dureté : HRC56-58 ou selon les demandes des clients",
+      "Traitement : Triple revenu, traitement thermique sous vide",
+      "Matériau : D2, SKD11, DC53..."
+    ],
+    "purchaseBtnTitle": "Obtenez les lames de broyeurs/granulateurs",
+    "purchaseLink": "mailto:sales@rumtoo.com"
+  }
+}

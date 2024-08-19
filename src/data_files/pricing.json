@@ -1,0 +1,38 @@
+{
+  "title": "Simple, Transparent Pricing",
+  "subTitle": "Boost efficiency with clear, value-driven plans.",
+  "badge": "Best price",
+  "thirdOption": "Enterprise Solutions?",
+  "btnText": "Get a Custom Quote",
+
+  "starterKit": {
+    "name": "Shredder Blades",
+    "description": "Best option for Shredders",
+    "price": "$10",
+    "cents": ".00",
+    "billingFrequency": "USD / pcs",
+    "features": [
+      "Performance: Good wear resistance, good toughness, long working life",
+      "Hardness: HRC56-58 or according customers request",
+      "Treatment: Vacuum heat treatment and Cryogenic treatment process"
+    ],
+    "purchaseBtnTitle": "Get the Shredder Blades",
+    "purchaseLink": "mailto:sales@rumtoo.com"
+  },
+
+  "professionalToolbox": {
+    "name": "Professional Crusher/Granulator Blades",
+    "description": "Best for Crusher/Granulator uses",
+    "price": "$24.8",
+    "cents": ".00",
+    "billingFrequency": "USD / pcs",
+    "features": [
+      "Performance: Good wear resistance, good toughness, long working life",
+      "Hardness: HRC56-58 or according customers request",
+      "Treatment: Triple tempered, Vacuum heat treatment",
+      "Material: D2,SKD11,DC53..."
+    ],
+    "purchaseBtnTitle": "Get the Crusher/Granulator Blades",
+    "purchaseLink": "mailto:sales@rumtoo.com"
+  }
+}

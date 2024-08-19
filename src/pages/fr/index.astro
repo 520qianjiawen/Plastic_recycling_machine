@@ -1,0 +1,145 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSection from "@/components/sections/landing/HeroSection.astro";
+import HeroSectionAlt from "@/components/sections/landing/HeroSectionAlt.astro";
+import ClientsSection from "@/components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "@/components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@/components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "@/components/sections/testimonials/TestimonialsSection.astro";
+import PricingSection from "@/components/sections/pricing/PricingSection.astro";
+import FAQ from "@/components/sections/FAQ.astro";
+import AnnouncementBanner from "@/components/ui/banners/AnnouncementBanner.astro";
+import heroImage from "@/images/wet plastic grinding.webp";
+import faqs from "@/data_files/fr/faqs.json";
+import features from "@/data_files/fr/features.json";
+import pricing from "@/data_files/fr/pricing.json";
+import featureImage from "@/images/hero-image.webp";
+import construction from "@/images/Thermal_dryer.webp";
+import tools from "@/images/Zig-Zag_Air_Classifier.webp";
+import dashboard from "@/images/Belt_conveyors.webp";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const avatarSrcs: Array<string> = [
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+];
+---
+
+<MainLayout lang="fr">
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Découvrez plus de machines de recyclage"
+    url="https://www.recyclingmachine.xyz"
+  />
+
+  <HeroSection
+    title=`Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">Rumtoo</span>`
+    subTitle="Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet."
+    primaryBtn="Commencez à explorer"
+    primaryBtnURL={getRelativeLocaleUrl("fr", "products")}
+    secondaryBtn="Contactez l'équipe commerciale"
+    secondaryBtnURL={getRelativeLocaleUrl("fr", "contact")}
+    withReview={true}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.8</span> / 5`
+    starCount={4}
+    reviews=`À partir de plus de <span class="font-bold">12,8k</span> avis`
+    src={heroImage}
+    alt="Un déchiqueteur de plastique industriel, probablement utilisé à des fins de recyclage. Les goulottes bleues et blanches alimentent le matériau plastique dans le déchiqueteur, qui le réduit ensuite en plus petits morceaux. Ces morceaux peuvent ensuite être traités davantage pour créer de nouveaux produits en plastique."
+  />
+
+  <ClientsSection
+    title="Faites confiance aux leaders de l'industrie"
+    subTitle="Découvrez la fiabilité choisie par les géants de l'industrie."
+  />
+
+  <FeaturesGeneral
+    title="Répondre aux exigences de l'industrie"
+    subTitle="Chez Rumtoo Machinery, nous nous engageons à résoudre les défis uniques rencontrés dans le monde du recyclage du plastique. Des équipements de recyclage de pointe aux services d'experts, nous sommes déterminés à vous aider à surmonter les obstacles et à atteindre vos objectifs."
+    src={featureImage}
+    alt="Une ligne de lavage de plastique à l'échelle industrielle. Ce type de machinerie est utilisé pour recycler les déchets plastiques en les nettoyant, triant et traitant. Les différents composants visibles dans l'image comprennent probablement des broyeurs, des convoyeurs, des cuves de lavage et des systèmes de séparation. La palette de couleurs orange et grise est courante dans l'équipement industriel."
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=`Personnalisez les offres de <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span> pour répondre parfaitement à vos besoins en matériel et en construction.`
+    tabs={[
+      {
+        heading: "Outils de pointe",
+        content:
+          "Nos machines de recyclage de pointe sont conçues pour être efficaces et polyvalentes, traitant facilement différents types et volumes de plastique.",
+        svg: "tools",
+        src: tools,
+        alt: "représentent un classificateur d'air Zig-Zag, une machine conçue pour séparer les matériaux en fonction de leur poids et de leurs caractéristiques aérodynamiques.",
+        first: true,
+      },
+      {
+        heading: "Tableaux de bord intuitifs",
+        content:
+          "Naviguez facilement avec les tableaux de bord intuitifs de ScrewFast. Configurez et supervisez vos projets de manière transparente, avec des interfaces conviviales conçues pour une gestion efficace des flux de travail rapide et efficace.",
+        svg: "dashboard",
+        src: dashboard,
+        alt: "Capture d'écran ou représentation graphique du tableau de bord intuitif",
+        second: true,
+      },
+      {
+        heading: "Fonctionnalités robustes",
+        content:
+          "Minimisez la complexité, maximisez la productivité. Les fonctionnalités robustes de ScrewFast sont conçues pour rationaliser votre processus de construction, offrant des résultats qui se distinguent par leur excellence.",
+        svg: "house",
+        src: construction,
+        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
+      },
+    ]}
+  />
+
+  <TestimonialsSection
+    title="Accélérer vos projets grâce à un recyclage efficace du plastique"
+    subTitle="Chez Rumtoo Machinery, nous vous aidons à atteindre rapidement vos objectifs de développement durable et à rationaliser vos opérations grâce à nos machines de recyclage du plastique à la pointe de la technologie. Mettez en place un système en boucle fermée et faites l'expérience de la rapidité et de l'efficacité du recyclage du plastique redéfini."
+    testimonials={[
+      {
+        content:
+          "Les solutions de recyclage du plastique ont complètement transformé notre processus de production. La mise en œuvre d'un système en boucle fermée a non seulement permis de réduire nos déchets, mais aussi de diminuer considérablement les coûts de production. L'équipe d'assistance a été fantastique, assurant une intégration rapide et sans heurts !",
+        author: "Samantha Ruiz",
+        role: "Directrice des opérations | ConstructIt Inc.",
+        avatarSrc:
+          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+      },
+    ]}
+statistics={[
+      {
+        count: "95%",
+        description:
+          "des déchets plastiques peuvent être efficacement recyclés en utilisant nos machines avancées",
+      },
+      {
+        count: "50%",
+        description:
+          "de réduction des déchets en décharge grâce au recyclage des plastiques",
+      },
+      {
+        count: "30%",
+        description:
+          "de coûts de production en moins par rapport à l'utilisation de matières plastiques vierges",
+      },
+      {
+        count: "2x",
+        description: "des temps de traitement plus rapides avec nos machines à haute efficacité",
+      },
+    ]}
+  />
+
+
+  <PricingSection pricing={pricing} />
+
+  <FAQ title="Questions<br />fréquemment posées" faqs={faqs} />
+
+  <HeroSectionAlt
+    title="Construisons ensemble"
+    subTitle="Un fabricant professionnel de machines de recyclage du plastique en Chine."
+    url="https://www.recyclingmachine.xyz"
+  />
+</MainLayout>
